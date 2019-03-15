@@ -10,3 +10,6 @@ const mongo_url=`mongodb://localhost/${DATABASE_NAME}`; //initialisation url de 
 dataBaseConnexion(mongo_url).then(()=> {
     setupRestApi(REST_API_PORT)
 }).catch((err) => console.error('error', error))
+
+// rollup
+//  webpack
