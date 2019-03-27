@@ -4,7 +4,7 @@ import dataBaseConnexion from './db/dbConnect';
 import setupRestApi from './api'
 config();
 
-const { DATABASE_NAME, REST_API_PORT = 3000 } = process.env //object distraction (const  DATABASE_NAME = process.env.DATABASE_NAME )
+const { DATABASE_NAME, REST_API_PORT  } = process.env //object distraction (const  DATABASE_NAME = process.env.DATABASE_NAME )
 
 const mongo_url=`mongodb://localhost/${DATABASE_NAME}`; //initialisation url de la base
 dataBaseConnexion(mongo_url).then(()=> {

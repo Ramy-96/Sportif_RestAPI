@@ -3,7 +3,7 @@ mongoose.Promise = global.Promise;
 
 const ReservationSchema = new mongoose.Schema({
     date: {
-      type: string,
+      type: String,
     },
     heure_deb: {
       type: String,

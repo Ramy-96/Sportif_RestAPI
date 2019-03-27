@@ -3,10 +3,12 @@ import userModel from '../../../db/models/Users'
 const { Router } = express;
 const router = Router();
 
-router.getById('/getUser/:id', function({ body }, res, next) {
-  userModel.getById(body).then(function(user){
-      res.send(user);
-  }).catch(next);
-
+router.get('/getUser', function(req,res) {
+  // res.send("hello")
+  userModel.find(req.body).then(function(user){
+    res.send(user);
+}).catch((err) => {
+  res.send('error')
+});
 });
 export default router;
